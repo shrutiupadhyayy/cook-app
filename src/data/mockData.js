@@ -7,6 +7,7 @@ export const mockDataTeam = [
       email: "jaykumar@gmail.com",
       address: "44,WallaceStreet",
       status: "Active",
+      actions: "",
     },
     {
       id: 2,
@@ -16,6 +17,8 @@ export const mockDataTeam = [
       email: "nishaaK@gmail.com",
       address: "22, AnandBhavan road",
       status: "Active",
+      actions: "",
+
     },
     {
       id: 3,
@@ -25,6 +28,8 @@ export const mockDataTeam = [
       email: "mojorojo@gmail.com",
       address: "A, Bandra road",
       status: "Active",
+      actions: "",
+
     },
     {
       id: 4,
@@ -34,6 +39,8 @@ export const mockDataTeam = [
       email: "neilKee@gmail.com",
       address: "D1, Wagle street",
       status: "Active",
+      actions: "",
+
     },
     {
       id: 5,
@@ -43,6 +50,8 @@ export const mockDataTeam = [
       email: "AkanshaaS@gmail.com",
       address: "B101, Shiv Nagar",
       status: "Active",
+      actions: "",
+
     },
     {
       id: 6,
@@ -52,6 +61,8 @@ export const mockDataTeam = [
       email: "varunthakkar1@gmail.com",
       address: "A404, Olive Street",
       status: "Active",
+      actions: "",
+
     },
   ];
   
