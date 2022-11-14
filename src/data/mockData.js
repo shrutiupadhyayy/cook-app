@@ -1,6 +1,7 @@
 export const mockDataTeam = [
     {
       id: 1,
+      avatar:"https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=400",
       name: "Jay Kumar",
       mobile: "9988998899",
       age: 32,
@@ -11,6 +12,7 @@ export const mockDataTeam = [
     },
     {
       id: 2,
+      avatar:"https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&w=400",
       name: "Nisha Khatri",
       mobile: "9900776688",
       age: 31,
@@ -22,6 +24,7 @@ export const mockDataTeam = [
     },
     {
       id: 3,
+      avatar:"https://images.pexels.com/photos/532220/pexels-photo-532220.jpeg?auto=compress&cs=tinysrgb&w=400",
       name: "Rohan Joshi",
       mobile: "9089876545",
       age: 36,
@@ -33,6 +36,7 @@ export const mockDataTeam = [
     },
     {
       id: 4,
+      avatar:"https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=400",
       name: "Neil Dsousa",
       mobile: "8767908765",
       age: 30,
@@ -44,6 +48,7 @@ export const mockDataTeam = [
     },
     {
       id: 5,
+      avatar:"https://images.pexels.com/photos/785667/pexels-photo-785667.jpeg?auto=compress&cs=tinysrgb&w=400",
       name: "Akansha Singh",
       mobile: "9645890987",
       age: 29,
@@ -55,6 +60,7 @@ export const mockDataTeam = [
     },
     {
       id: 6,
+      avatar:"https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=400",
       name: "Varun Thakkar",
       mobile: "9654321209",
       age: 34,

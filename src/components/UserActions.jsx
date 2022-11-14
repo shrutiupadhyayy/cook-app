@@ -2,10 +2,13 @@ import { Box, Fab } from '@mui/material'
 import { useState } from 'react'
 import { Check, Save} from '@mui/icons-material'
 import { green } from '@mui/material/colors'
+import CircularProgress from '@mui/material/CircularProgress';
 
 const UserActions = ({params, rowId, setRowId}) => {
   const [loading, setLoading] = useState(false)
-  const [success, setSuccess ] = useState(false)
+  const [success, setSuccess ] = useState(true)
+
+
   return (
     <Box
       sx={{
@@ -40,7 +43,7 @@ const UserActions = ({params, rowId, setRowId}) => {
           <Save />
         </Fab>
       )}
-      {/* {loading && (
+      {loading && (
         <CircularProgress 
         size={52}
         sx={{
@@ -51,7 +54,7 @@ const UserActions = ({params, rowId, setRowId}) => {
           zIndex:1
         }}
       />
-      )} */}
+      )}
     </Box>
   )
 }

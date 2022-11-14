@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import UserActions from "./UserActions";
 import {
   AppBar,
+  Avatar,
   Box,
   Container,
   IconButton,
@@ -24,12 +25,20 @@ const NavBar = () => {
 
   const columns = [
     { field: "id", headerName: "ID", width: 70 },
+    { field: "avatar", headerName:"Profile", 
+      width: 60,
+      editable: true,
+      renderCell: (params) => <Avatar src={params.row.avatar} />,
+      sortable :false,
+      filterable: false,
+    },
     {
       field: "name",
       headerName: "Name",
       //   flex: 3,
       cellClassName: "name-column--cell",
       width: 140,
+
     },
 
     {
@@ -96,15 +105,19 @@ const NavBar = () => {
 
       <Box
         m="70px"
+        // display="flex"
+        justifyContent="center"
+        alignItems="center"
+
         sx={{
           height: 450,
-          width: "80%",
+          width: "65%",
         }}
       >
         <Typography
           variant="h3"
           component="h3"
-          sx={{ textAlign: "center", mt: 15, mb: 10 }}
+          sx={{ textAlign: "center", mt: 15, mb: 5 }}
         >
           Manage Cooks
         </Typography>
