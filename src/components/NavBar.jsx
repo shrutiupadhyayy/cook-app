@@ -13,6 +13,7 @@ import {
 import { Menu } from "@mui/icons-material";
 import { DataGrid } from "@mui/x-data-grid";
 import { mockDataTeam } from "../data/mockData";
+import styled from 'styled-components';
 
 const NavBar = () => {
   // useEffect(() => {
@@ -25,11 +26,13 @@ const NavBar = () => {
 
   const columns = [
     { field: "id", headerName: "ID", width: 70 },
-    { field: "avatar", headerName:"Profile", 
-      width: 60,
+    {
+      field: "avatar",
+      headerName: "Profile",
+      width: 80,
       editable: true,
       renderCell: (params) => <Avatar src={params.row.avatar} />,
-      sortable :false,
+      sortable: false,
       filterable: false,
     },
     {
@@ -38,7 +41,6 @@ const NavBar = () => {
       //   flex: 3,
       cellClassName: "name-column--cell",
       width: 140,
-
     },
 
     {
@@ -74,28 +76,46 @@ const NavBar = () => {
       headerName: "Actions",
       type: "actions",
       width: 100,
-      renderCell: (params) => (
-        <UserActions {...{params, rowId, setRowId}} />
-      ),
+      renderCell: (params) => <UserActions {...{ params, rowId, setRowId }} />,
     },
     [rowId],
   ];
+   
+  const Button = styled.button`
+  background-color: rgb(53, 166, 255);
+  color: white;
+  font-size: 15px;
+  padding: 15px 15px;
+  border-radius: 7px;
+  margin-left: 1120px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  position: relative;
+  `;
+  
 
+  // export default function BasicButtons() {
   return (
     <div>
       <AppBar>
         <Container maxWidth="lg">
           <Toolbar disableGutters>
-            <Box sx={{ mr: 0.5 }}>
+            <Box sx={{ mr: 0.2 }}>
               <IconButton size="large" color="inherit">
-                <Menu />
+                {/* <Menu 
+                  //  anchorEl={anchorEl}
+                   anchorOrigin={{
+                    vertical: "top",
+                    horizontal: "left"
+                  }}
+                /> */}
               </IconButton>
             </Box>
             <Typography
               variant="h6"
               component="h1"
-              noWrap
-              sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}
+              align="left"
+              sx={{display: { xs: "none", md: "none" } }}
             >
               Cook's Dashboard
             </Typography>
@@ -103,12 +123,12 @@ const NavBar = () => {
         </Container>
       </AppBar>
 
+
       <Box
-        m="70px"
+        m="190px"
         // display="flex"
         justifyContent="center"
         alignItems="center"
-
         sx={{
           height: 450,
           width: "65%",
@@ -117,16 +137,19 @@ const NavBar = () => {
         <Typography
           variant="h3"
           component="h3"
-          sx={{ textAlign: "center", mt: 15, mb: 5 }}
+          sx={{ textAlign: "center", mt: 15, mb: 2 }}
         >
           Manage Cooks
         </Typography>
+        <Button>
+        Add/Edit
+      </Button>
 
         <DataGrid
           sx={{
             boxShadow: 1,
             border: 1,
-            borderColor: "blue",
+            borderColor: "darkgrey",
           }}
           rows={mockDataTeam}
           columns={columns}
@@ -139,5 +162,6 @@ const NavBar = () => {
     </div>
   );
 };
+// };
 
 export default NavBar;

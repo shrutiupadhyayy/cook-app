@@ -6,7 +6,7 @@ import CircularProgress from '@mui/material/CircularProgress';
 
 const UserActions = ({params, rowId, setRowId}) => {
   const [loading, setLoading] = useState(false)
-  const [success, setSuccess ] = useState(true)
+  const [success, setSuccess ] = useState(false)
 
 
   return (

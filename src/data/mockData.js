@@ -24,7 +24,7 @@ export const mockDataTeam = [
     },
     {
       id: 3,
-      avatar:"https://images.pexels.com/photos/532220/pexels-photo-532220.jpeg?auto=compress&cs=tinysrgb&w=400",
+      avatar:"https://images.pexels.com/photos/1043473/pexels-photo-1043473.jpeg?auto=compress&cs=tinysrgb&w=400",
       name: "Rohan Joshi",
       mobile: "9089876545",
       age: 36,
