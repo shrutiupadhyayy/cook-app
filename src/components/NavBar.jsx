@@ -10,15 +10,18 @@ import {
   Toolbar,
   Typography,
 } from "@mui/material";
-import { Menu } from "@mui/icons-material";
 import { DataGrid } from "@mui/x-data-grid";
 import { mockDataTeam } from "../data/mockData";
 import styled from 'styled-components';
+import { useNavigate } from "react-router-dom";
+
 
 const NavBar = () => {
   // useEffect(() => {
   //     setSelectedLink(link);
   // }, [])
+
+  const navigate = useNavigate()
 
   const [pageSize, setPageSize] = useState(6);
 
@@ -93,7 +96,6 @@ const NavBar = () => {
   position: relative;
   `;
   
-
   // export default function BasicButtons() {
   return (
     <div>
@@ -102,13 +104,6 @@ const NavBar = () => {
           <Toolbar disableGutters>
             <Box sx={{ mr: 0.2 }}>
               <IconButton size="large" color="inherit">
-                {/* <Menu 
-                  //  anchorEl={anchorEl}
-                   anchorOrigin={{
-                    vertical: "top",
-                    horizontal: "left"
-                  }}
-                /> */}
               </IconButton>
             </Box>
             <Typography
@@ -141,9 +136,13 @@ const NavBar = () => {
         >
           Manage Cooks
         </Typography>
-        <Button>
-        Add/Edit
+
+
+      <Button onClick={() => navigate('/cookDetails')}>
+        Add/Edit 
       </Button>
+        
+        
 
         <DataGrid
           sx={{
